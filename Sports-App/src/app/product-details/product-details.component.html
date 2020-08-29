@@ -1,0 +1,19 @@
+<div class="jumbotron">
+    <h1 class="display-3">{{product.productName}}</h1>
+    <p class="lead">{{product.company.companyName}}</p>
+    <hr class="my-2">
+    <h4>PRICE: {{product.price | currency:'Rs '}}</h4>
+    <h4 >SPORT: {{product.segment}}</h4>
+    <div><h4>CATEGORY:</h4>
+        <div *ngFor='let category of product.category'>
+            {{category}}
+        </div>
+    </div>
+    <div><h4>BRANCHES:</h4>
+    <div *ngFor='let branch of product.branchlist'>
+    {{branch.branchName}}
+    </div></div><br>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Add to Cart</a>
+    </p>
+</div>
